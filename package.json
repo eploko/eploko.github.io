@@ -1,0 +1,32 @@
+{
+  "name": "subbotin-web",
+  "version": "1.0.0",
+  "description": "Andrey Subbotin's personal web site",
+  "main": "index.js",
+  "directories": {
+    "doc": "doc",
+    "test": "test"
+  },
+  "scripts": {
+    "test": "echo \"Error: no test specified\" && exit 1",
+    "build:css": "postcss -c postcss.config.js -o resources/assets/css/main.css resources/css/*.css && echo OK",
+    "watch:css": "onchange -i 'resources/assecs/css/**/*.css' 'tailwind.config.js' 'postcss.config.js' -- npm run build:css"
+  },
+  "repository": {
+    "type": "git",
+    "url": "git+https://github.com/eploko/subbotin-web.git"
+  },
+  "author": "",
+  "license": "ISC",
+  "bugs": {
+    "url": "https://github.com/eploko/subbotin-web/issues"
+  },
+  "homepage": "https://github.com/eploko/subbotin-web#readme",
+  "dependencies": {},
+  "devDependencies": {
+    "@tailwindcss/typography": "^0.2.0",
+    "onchange": "^7.1.0",
+    "postcss-cli": "^8.2.0",
+    "tailwindcss": "^1.9.6"
+  }
+}
