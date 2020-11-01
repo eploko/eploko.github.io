@@ -7,20 +7,18 @@
    [matsuri.fx :as fx]
    [optimus.assets :as assets]                    
    [optimus.link :as link]
-   [plokodelika.toolbelt :as tb])
+   [plokodelika.toolbelt :as tb]
+   [subbotin-web.data :as data])
   (:import
    [java.time ZonedDateTime Year]
    [java.time.format DateTimeFormatter])
   (:gen-class))
 
-(def site-title
-  "Andrey Subbotin")
-
 (defn page-title
   [title]
   (if title
-    (str title " &mdash; " site-title)
-    site-title))
+    (str title " &mdash; " data/site-title)
+    data/site-title))
 
 (def current-year
   (.getValue (Year/now)))
@@ -90,6 +88,17 @@
     "."]
    [:p.mt-4 (str "Last updated on " generated-at ".")]])
 
+(defn elsewhere
+  [xs]
+  [:ul.mt-16.text-5xl.flex.flex-row
+   (map (fn [x]
+          [:li.mr-6
+           (href
+            {:plain true
+             :href (:href x)}
+            (apply fa (:icon x)))])
+        xs)])
+
 (defn layout
   [attrs body request]
   (html5 {:lang "en"}
@@ -118,21 +127,7 @@
      [:span.bg-highlighting "software development professionally since 1998."]
      " I don't write code. I don't code software. "
      "I meticulously culture it."]
-    [:p.mt-16.text-5xl
-     (href
-      {:plain true
-       :href "https://github.com/eploko"}
-      (fa :fab :fa-github-square))
-     " "
-     (href
-      {:plain true
-       :href "https://stackoverflow.com/users/355357/eploko"}
-      (fa :fab :fa-stack-overflow))
-     " "
-     (href
-      {:plain true
-       :href "https://www.linkedin.com/in/asubbotin/"}
-      (fa :fab :fa-linkedin))]]
+    (elsewhere data/elsewhere)]
    [:img.HeyPic {:src (link/file-path request "/images/andrey-subbotin.gif")}]])
 
 (defn matsuri-page
