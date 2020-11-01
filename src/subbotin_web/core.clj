@@ -126,6 +126,11 @@
      " "
      (href
       {:plain true
+       :href "https://stackoverflow.com/users/355357/eploko"}
+      (fa :fab :fa-stack-overflow))
+     " "
+     (href
+      {:plain true
        :href "https://www.linkedin.com/in/asubbotin/"}
       (fa :fab :fa-linkedin))]]
    [:img.HeyPic {:src (link/file-path request "/images/andrey-subbotin.gif")}]])
