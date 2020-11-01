@@ -43,8 +43,12 @@
 
 (defn fa
   "A Font Awesome icon with the given name."
-  [x & xs]
-  [:span {:class (str/join " " (map name (cons x xs)))}])
+  [x-or-opts & xs]
+  (let [opts (if (map? x-or-opts) x-or-opts {})]
+    [:span (merge opts
+                  {:class (str/join " " (map name (if (map? x-or-opts)
+                                                    xs
+                                                    (cons x-or-opts xs))))})]))
 
 (defn href
   [opts & children]
@@ -130,7 +134,9 @@
                     "bg-green hover:bg-green-600 focus:bg-green-600"
                     "active:bg-green-700 focus:border-linkiro"
                     "text-white cursor-pointer shadow-sm")
-      :type "submit"} "Send"]]])
+      :type "submit"}
+     [:span.mr-2 "Send"]
+     (fa :fas :fa-paper-plane)]]])
 
 (defn layout
   [attrs body request]
