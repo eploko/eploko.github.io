@@ -1,4 +1,5 @@
-/target
+/target/*
+!/target/public
 /classes
 /checkouts
 /node_modules
