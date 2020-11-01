@@ -5,7 +5,7 @@
    [hiccup.page :refer [html5]]
    [matsuri.core :as m]
    [matsuri.fx :as fx]
-   [optimus.assets :as assets]                    
+   [optimus.assets :as assets]
    [optimus.link :as link]
    [plokodelika.toolbelt :as tb]
    [subbotin-web.data :as data])
@@ -25,7 +25,7 @@
 
 (def generated-at
   (let [moment (ZonedDateTime/now)]
-    (str 
+    (str
      (.format moment
               (DateTimeFormatter/ofPattern "EEEE, MMMM d, YYYY"))
      " at "
@@ -49,7 +49,7 @@
 (defn href
   [opts & children]
   (let [rest-opts (dissoc opts :class :plain)]
-    (into 
+    (into
      [:a.text-linkiro
       (merge rest-opts
              {:class (tb/cx (:class opts)
@@ -81,7 +81,7 @@
          " Andrey Subbotin.")]
    [:p
     "This work is licensed under "
-    (href 
+    (href
      {:rel "license"
       :href "https://creativecommons.org/licenses/by-sa/4.0/"}
      "Creative Commons Attribution-ShareAlike 4.0 International License")
@@ -98,6 +98,39 @@
              :href (:href x)}
             (apply fa (:icon x)))])
         xs)])
+
+(defn contact-form
+  []
+  [:div.max-w-xl
+   [:h3.text-2xl.font-medium "Say hello"]
+   [:form.mt-6.flex.flex-col
+    {:action "https://formspree.io/f/mwkwbqkg"
+     :method "POST"}
+    [:label.flex.flex-col
+     "Your email:"
+     [:input
+      {:class "border p-2 leading-loose font-mono outline-none focus:border-linkiro transition duration-200"
+       :type "email"
+       :spell-check false
+       :placeholder "yourname@example.com"
+       :name "_replyto"
+       :required true}]]
+    [:label.mt-4.flex.flex-col
+     "Message:"
+     [:textarea
+      {:class "border p-2 leading-loose font-mono outline-none focus:border-linkiro transition duration-200"
+       :name "message"
+       :rows 6
+       :placeholder "Hey Andrey,\n…"
+       :required true}]]
+    [:button.self-start.mt-6.px-4.py-2.bg-green.text-white
+     {:class (tb/cx "p-4 text-lg outline-none focus:outline-none"
+                    "text-opacity-95 rounded border border-transparent"
+                    "transition duration-200"
+                    "bg-green hover:bg-green-600 focus:bg-green-600"
+                    "active:bg-green-700 focus:border-linkiro"
+                    "text-white cursor-pointer shadow-sm")
+      :type "submit"} "Send"]]])
 
 (defn layout
   [attrs body request]
@@ -118,17 +151,20 @@
 
 (defn home-page
   [request]
-  [:div.pt-8.flex.flex-row.border-b.border-gray-200
-   [:div
-    [:p.text-2xl.font-medium "Hey! "]
-    [:h1.text-6xl.font-extrabold "I'm Andrey Subbotin."]
-    [:p.text-xl.max-w-xl
-     "I've been digging all things "
-     [:span.bg-highlighting "software development professionally since 1998."]
-     " I don't write code. I don't code software. "
-     "I meticulously culture it."]
-    (elsewhere data/elsewhere)]
-   [:img.HeyPic {:src (link/file-path request "/images/andrey-subbotin.gif")}]])
+  [:div
+   [:div.pt-8.flex.flex-row.border-b.border-gray-200
+    [:div
+     [:p.text-2xl.font-medium "Hey! "]
+     [:h1.text-6xl.font-extrabold "I'm Andrey Subbotin."]
+     [:p.text-xl.max-w-xl
+      "I've been digging all things "
+      [:span.bg-highlighting "software development professionally since 1998."]
+      " I don't write code. I don't code software. "
+      "I meticulously culture it."]
+     (elsewhere data/elsewhere)]
+    [:img.HeyPic {:src (link/file-path request "/images/andrey-subbotin.gif")}]]
+   [:div.py-16.border-b.border-gray-200
+    (contact-form)]])
 
 (defn matsuri-page
   [_request]
@@ -172,4 +208,3 @@
 
 (comment
   (m/run-pipeline pipeline))
-
