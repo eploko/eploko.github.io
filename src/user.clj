@@ -7,13 +7,15 @@
 (defonce !server (atom nil))
 
 (defn go
-  []
-  (reset! !server
-          (server/serve #'web/pipeline
-                        {:assets-fn web/get-assets
-                         :ring
-                         {:join? false
-                          :port 3000}})))
+  ([]
+   (go false))
+  ([join?]
+   (reset! !server
+           (server/serve #'web/pipeline
+                         {:assets-fn web/get-assets
+                          :ring
+                          {:join? join?
+                           :port 3000}}))))
 
 (defn stop
   []

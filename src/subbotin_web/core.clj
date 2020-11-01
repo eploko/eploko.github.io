@@ -128,7 +128,7 @@
       {:plain true
        :href "https://www.linkedin.com/in/asubbotin/"}
       (fa :fab :fa-linkedin))]]
-   [:img.HeyPic {:src (link/file-path request "/images/andrey-subbotin.png")}]])
+   [:img.HeyPic {:src (link/file-path request "/images/andrey-subbotin.gif")}]])
 
 (defn matsuri-page
   [_request]
