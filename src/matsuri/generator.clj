@@ -33,7 +33,7 @@
           :or {assets-fn assets/no-assets}}
          opts
 
-         path "target/public"
+         path "docs"
 
          site-assets (make-assets assets-fn)
          request {:optimus-assets site-assets}]
