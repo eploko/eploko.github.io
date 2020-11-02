@@ -2,9 +2,9 @@
 @tailwind components;
 @tailwind utilities;
 
-.HeyPic {
-    position: relative;
-    top: -150px;
-    height: 95vh;
-    margin-bottom: -150px;
-}
+/* .HeyPic { */
+/*     position: relative; */
+/*     top: -150px; */
+/*     height: 95vh; */
+/*     margin-bottom: -150px; */
+/* } */

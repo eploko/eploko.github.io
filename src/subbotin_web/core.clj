@@ -62,13 +62,13 @@
 
 (defn header
   []
-  [:header.py-8.px-16.bg-manila-light.border-b.border-gray-200
+  [:header {:class "p-6 md:p-8 lg:p-12 xl:p-16 bg-manila-light border-b border-gray-200"}
    [:p "&nbsp;"
     #_[:span "About | Projects | Essays | CV"]]])
 
 (defn footer
   []
-  [:footer.py-8.px-16.bg-manila-light
+  [:footer {:class "p-6 md:p-8 lg:p-12 xl:p-16 bg-manila-light border-t border-gray-100"}
    [:p "Built with Emacs, Clojure, Matsuri, Tailwind CSS, Sketch, and heaps of experience."]
    [:p.mt-4.text-xl
     (href {:plain true
@@ -83,7 +83,7 @@
     (str "Copyright &copy; 1993&ndash;"
          current-year
          " Andrey Subbotin.")]
-   [:p
+   [:p {:class "mt-4 md:mt-0"}
     "This work is licensed under "
     (href
      {:rel "license"
@@ -94,9 +94,9 @@
 
 (defn elsewhere
   [xs]
-  [:ul.mt-16.text-5xl.flex.flex-row
+  [:ul {:class "my-8 flex flex-row"}
    (map (fn [x]
-          [:li.mr-6
+          [:li {:class "text-2xl mr-6 md:text-3xl md:mr-8 2xl:text-5xl xl:mt-8 2xl:mt-16"}
            (href
             {:plain true
              :href (:href x)}
@@ -105,7 +105,7 @@
 
 (defn contact-form
   []
-  [:div.max-w-xl
+  [:div {:class "p-6 md:p-8 lg:p-12 xl:p-16 lg:max-w-screen-md"}
    [:h3.text-2xl.font-medium "Say hello"]
    [:form.mt-6.flex.flex-col
     {:action "https://formspree.io/f/mwkwbqkg"
@@ -151,26 +151,27 @@
                     :crossorigin "anonymous"}]]
          [:body.min-h-screen.flex.flex-col.bg-manila-light
           (header)
-          [:div.flex-1.py-8.px-16.bg-manila-light body]
+          [:div {:class "flex-1 bg-manila-light"}
+           body]
           (footer)
           #_[:code (hiccup/h (str request))]]))
 
 (defn home-page
   [request]
   [:div
-   [:div.pt-8.flex.flex-row.border-b.border-gray-200
-    [:div
-     [:p.text-2xl.font-medium "Hey! "]
-     [:h1.text-6xl.font-extrabold "I'm Andrey Subbotin."]
-     [:p.text-xl.max-w-xl
+   [:div {:class "flex flex-col md:flex-row border-b border-gray-100"}
+    [:div {:class "p-6 md:p-8 lg:p-12 xl:p-16 pb-0 md:pb-0 lg:pb-0 xl:pb-0 flex flex-col border-b border-gray-100 md:border-none lg:max-w-2/3 xl:max-w-1/2"}
+     [:p {:class "text-xl sm:text-2xl font-medium"} "Hey! "]
+     [:h1 {:class "text-3xl sm:text-4xl lg:text-5xl xl:text-6xl 2xl:text-8xl pb-4 font-extrabold"} "I'm Andrey Subbotin."]
+     [:p {:class "md:text-xl lg:text-2xl lg:font-light 2xl:text-4xl"}
       "I've been digging all things "
       [:span.bg-highlighting "software development professionally since 1998."]
       " I don't write code. I don't code software. "
       "I meticulously culture it."]
      (elsewhere data/elsewhere)]
-    [:img.HeyPic {:src (link/file-path request "/images/andrey-subbotin.gif")}]]
-   [:div.py-16.border-b.border-gray-200
-    (contact-form)]])
+    [:img {:class "md:w-1/3 xl:w-1/4 2xl:w-1/5 md:-mt-20 lg:-mt-24 xl:-mt-32"
+           :src (link/file-path request "/images/andrey-subbotin.gif")}]]
+   (contact-form)])
 
 (defn matsuri-page
   [_request]
