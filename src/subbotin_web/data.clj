@@ -9,5 +9,7 @@
     :icon [:fab :fa-github]}
    {:href "https://stackoverflow.com/users/355357/eploko"
     :icon [:fab :fa-stack-overflow]}
+   {:href "https://dribbble.com/eploko"
+    :icon [:fab :fa-dribbble]}
    {:href "https://www.linkedin.com/in/asubbotin/"
     :icon [:fab :fa-linkedin]}])
