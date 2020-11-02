@@ -116,38 +116,11 @@
 
 (defn contact-form
   []
-  [:div {:class "p-6 md:p-8 lg:p-12 xl:p-16 lg:max-w-screen-md"}
-   [:h3.text-2xl.font-medium "Say hello"]
-   [:form.mt-6.flex.flex-col
-    {:action "https://formspree.io/f/mwkwbqkg"
-     :method "POST"}
-    [:label.flex.flex-col
-     "Your email:"
-     [:input
-      {:class "border p-2 leading-loose font-mono outline-none focus:border-linkiro transition duration-200"
-       :type "email"
-       :spell-check false
-       :placeholder "yourname@example.com"
-       :name "_replyto"
-       :required true}]]
-    [:label.mt-4.flex.flex-col
-     "Message:"
-     [:textarea
-      {:class "border p-2 leading-loose font-mono outline-none focus:border-linkiro transition duration-200"
-       :name "message"
-       :rows 6
-       :placeholder "Hey Andrey,\n…"
-       :required true}]]
-    [:button.self-start.mt-6.px-4.py-2.bg-green.text-white
-     {:class (tb/cx "p-4 text-lg outline-none focus:outline-none"
-                    "text-opacity-95 rounded border border-transparent"
-                    "transition duration-200"
-                    "bg-green hover:bg-green-600 focus:bg-green-600"
-                    "active:bg-green-700 focus:border-linkiro"
-                    "text-white cursor-pointer shadow-sm")
-      :type "submit"}
-     [:span.mr-2 "Send"]
-     (fa :fas :fa-paper-plane)]]])
+  [:div {:class "bg-manila"}
+   [:div {:class "p-6 md:p-8 lg:p-12 xl:p-16 lg:max-w-screen-md"}
+    [:h3 {:class "mb-4 text-2xl font-medium"} "Say hello"]
+    [:p "If you have any questions, ideas, or thoughts to share, please feel free to reach me via "
+     (href {:src "mailto:andrey@subbotin.me"} "andrey@subbotin.me")]]])
 
 (defn layout
   [attrs body request]
