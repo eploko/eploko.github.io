@@ -64,9 +64,10 @@
   [opts & children]
   (let [rest-opts (dissoc opts :class :plain)]
     (into
-     [:a.text-linkiro
+     [:a
       (merge rest-opts
              {:class (tb/cx (:class opts)
+                            "text-linkiro hover:text-green transition duration-200"
                             {"underline" (not (:plain opts))})})]
      children)))
 
