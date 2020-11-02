@@ -120,7 +120,7 @@
    [:div {:class "p-6 md:p-8 lg:p-12 xl:p-16 lg:max-w-screen-md"}
     [:h3 {:class "mb-4 text-2xl font-medium"} "Say hello"]
     [:p "If you have any questions, ideas, or thoughts to share, please feel free to reach me via "
-     (href {:src "mailto:andrey@subbotin.me"} "andrey@subbotin.me")]]])
+     (href {:href "mailto:andrey@subbotin.me"} "andrey@subbotin.me")]]])
 
 (defn layout
   [attrs body request]
