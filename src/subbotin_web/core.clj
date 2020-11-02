@@ -41,6 +41,16 @@
   (hiccup/html
    [:div {:class "prose lg:prose-xl"} text]))
 
+(defn google-analytics
+  "Global site tag (gtag.js) - Google Analytics"
+  [measurement-id]
+  (list [:script {:async true
+                  :src (str "https://www.googletagmanager.com/gtag/js?id=" measurement-id)}]
+        [:script (str "window.dataLayer = window.dataLayer || [];"
+                      "function gtag(){dataLayer.push(arguments);}"
+                      "gtag('js', new Date());"
+                      "gtag('config', '" measurement-id "');")]))
+
 (defn fa
   "A Font Awesome icon with the given name."
   [x-or-opts & xs]
@@ -142,6 +152,7 @@
   [attrs body request]
   (html5 {:lang "en"}
          [:head
+          (google-analytics "G-MH7W1FTWXV")
           [:meta {:charset "utf-8"}]
           [:meta {:name "viewport"
 	          :content "width=device-width, initial-scale=1.0"}]
