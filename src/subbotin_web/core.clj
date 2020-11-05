@@ -182,7 +182,7 @@
      (elsewhere data/elsewhere)]
     [:img {:class (tb/cx "sm:w-1/2 md:w-1/3 xl:w-1/4 2xl:w-1/5 md:-mt-20 lg:-mt-24 xl:-mt-32"
                          "sm:self-center md:self-auto")
-           :src (link/file-path request "/images/andrey-subbotin.gif")}]]
+           :src (link/file-path request "/images/andrey-subbotin.png")}]]
    (contact-form)])
 
 (defn public-key-page
