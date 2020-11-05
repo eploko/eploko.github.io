@@ -129,7 +129,7 @@
                           "text-xs md:text-base mt-6 xl:mt-8")}
       (fa {:class "mr-4 md:text-lg lg:text-2xl"} :fas :fa-fingerprint)
       [:div {:class "flex-1"}
-       [:p "My PGP/GnuPG key fingerprint is:"]
+       [:p "My PGP key fingerprint is:"]
        [:p {:class "mt-2"}
         [:code {:class "whitespace-no-wrap mr-6"} pk-part-1]
         "&#8203;"
