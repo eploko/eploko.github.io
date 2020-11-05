@@ -54,22 +54,27 @@
 (defn fa
   "A Font Awesome icon with the given name."
   [x-or-opts & xs]
-  (let [opts (if (map? x-or-opts) x-or-opts {})]
-    [:span (merge opts
-                  {:class (str/join " " (map name (if (map? x-or-opts)
-                                                    xs
-                                                    (cons x-or-opts xs))))})]))
+  (let [opts (if (map? x-or-opts) x-or-opts {})
+        rest-opts (dissoc opts :class)
+
+        icon [:span (merge rest-opts
+                           {:class (str/join " " (map name (if (map? x-or-opts)
+                                                             xs
+                                                             (cons x-or-opts xs))))})]]
+    (if-let [class (:class opts)]
+      [:span {:class class} icon]
+      icon)))
 
 (defn href
   [opts & children]
-  (let [rest-opts (dissoc opts :class :plain)]
-    (into
-     [:a
-      (merge rest-opts
-             {:class (tb/cx (:class opts)
-                            "text-linkiro hover:text-green transition duration-200"
-                            {"underline" (not (:plain opts))})})]
-     children)))
+  (let [rest-opts (dissoc opts :class :decorated?)
+        decorated? (get opts :decorated? true)]
+    [:a
+     (merge rest-opts
+            {:class (tb/cx (:class opts)
+                           "text-linkiro hover:text-green transition duration-100"
+                           {"underline" decorated?})})
+     children]))
 
 (defn header
   []
@@ -82,7 +87,7 @@
   [:footer {:class "p-6 md:p-8 lg:p-12 xl:p-16 bg-manila-light border-t border-gray-100"}
    [:p "Built with Emacs, Clojure, Matsuri, Tailwind CSS, Sketch, and heaps of experience."]
    [:p.mt-4.text-xl
-    (href {:plain true
+    (href {:decorated? false
            :rel "license"
            :href "https://creativecommons.org/licenses/by-sa/4.0/"}
           (fa :fab :fa-creative-commons)
@@ -109,10 +114,27 @@
    (map (fn [x]
           [:li {:class "text-2xl mr-6 md:text-3xl md:mr-8 2xl:text-5xl xl:mt-8 2xl:mt-16"}
            (href
-            {:plain true
+            {:decorated? false
              :href (:href x)}
             (apply fa (:icon x)))])
         xs)])
+
+(defn public-key-pane
+  []
+  (let [[pk-part-1 pk-part-2] data/pgp-fingerprint-parts]
+    [:a {:href "/public-key/"}
+     [:div {:class (tb/cx "bg-manila-ligth hover:text-white hover:bg-green hover:border-green"
+                          "transition duration-100"
+                          "flex flex-row items-center p-4 border border-linkiro"
+                          "text-xs md:text-base mt-6 xl:mt-8")}
+      (fa {:class "mr-4 md:text-lg lg:text-2xl"} :fas :fa-fingerprint)
+      [:div {:class "flex-1"}
+       [:p "My PGP/GnuPG key fingerprint is:"]
+       [:p {:class "mt-2"}
+        [:code {:class "whitespace-no-wrap mr-6"} pk-part-1]
+        "&#8203;"
+        [:code {:class "whitespace-no-wrap"} pk-part-2]]]
+      (fa :fas :fa-angle-right)]]))
 
 (defn contact-form
   []
@@ -120,7 +142,8 @@
    [:div {:class "p-6 md:p-8 lg:p-12 xl:p-16 lg:max-w-screen-md"}
     [:h3 {:class "mb-4 text-2xl font-medium"} "Say hello"]
     [:p "If you have any questions, ideas, or thoughts to share, please feel free to reach me via "
-     (href {:href "mailto:andrey@subbotin.me"} "andrey@subbotin.me")]]])
+     (href {:href (str "mailto:" data/email)} data/email)]
+    (public-key-pane)]])
 
 (defn layout
   [attrs body request]
@@ -145,18 +168,38 @@
   [request]
   [:div
    [:div {:class "flex flex-col md:flex-row border-b border-gray-100"}
-    [:div {:class "p-6 md:p-8 lg:p-12 xl:p-16 pb-0 md:pb-0 lg:pb-0 xl:pb-0 flex flex-col border-b border-gray-100 md:border-none lg:max-w-2/3 xl:max-w-1/2"}
+    [:div {:class (tb/cx "p-6 md:p-8 lg:p-12 xl:p-16 pb-0 md:pb-0 lg:pb-0 xl:pb-0"
+                         "flex flex-col border-b border-gray-100 md:border-none"
+                         "lg:max-w-2/3 xl:max-w-1/2")}
      [:p {:class "text-xl sm:text-2xl font-medium"} "Hey! "]
-     [:h1 {:class "text-3xl sm:text-4xl lg:text-5xl xl:text-6xl 2xl:text-8xl pb-4 font-extrabold"} "I'm Andrey Subbotin."]
+     [:h1 {:class "text-3xl sm:text-4xl lg:text-5xl xl:text-6xl 2xl:text-8xl pb-4 font-extrabold"}
+      "I'm Andrey Subbotin."]
      [:p {:class "md:text-xl lg:text-2xl lg:font-light 2xl:text-4xl"}
       "I've been digging all things "
       [:span.bg-highlighting "software development professionally since 1998."]
       " I don't write code. I don't code software. "
       "I meticulously culture it."]
      (elsewhere data/elsewhere)]
-    [:img {:class "sm:w-1/2 md:w-1/3 xl:w-1/4 2xl:w-1/5 md:-mt-20 lg:-mt-24 xl:-mt-32 sm:self-center md:self-auto"
+    [:img {:class (tb/cx "sm:w-1/2 md:w-1/3 xl:w-1/4 2xl:w-1/5 md:-mt-20 lg:-mt-24 xl:-mt-32"
+                         "sm:self-center md:self-auto")
            :src (link/file-path request "/images/andrey-subbotin.gif")}]]
    (contact-form)])
+
+(defn public-key-page
+  [_request]
+  [:div {:class (tb/cx "p-6 md:p-8 lg:p-12 xl:p-16")}
+   [:div {:class "prose prose-sm sm:prose lg:prose-lg xl:prose-xl 2xl:prose-2xl"}
+    [:h1 "My PGP Public Key"]
+    [:p "My key has a life span of one year. I extend it when it's about "
+     "to expire. You can always find the current key on this page or at the OpenPGP "
+     "keyserver "
+     (href {:href "https://keys.openpgp.org/search?q=andrey%40subbotin.me"}
+           "here")
+     "."]
+    [:h3 "The Fingerprint"]
+    [:pre data/pgp-fingerprint]
+    [:h3 "The Public Key"]
+    [:pre data/pgp-public-key]]])
 
 (defn matsuri-page
   [_request]
@@ -179,6 +222,11 @@
                            merge
                            {:content-type "text/hiccup"
                             :content home-page})
+      (m/edit-node-at-path "/public-key/index"
+                           merge
+                           {:title "My PGP Public Key"
+                            :content-type "text/hiccup"
+                            :content public-key-page})
       (m/edit-node-at-path "/matsuri/index"
                            merge
                            {:title "Matsuri: Static Site Generator"

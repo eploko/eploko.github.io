@@ -150,6 +150,19 @@ module.exports = {
       prose: '65ch',
       ...breakpoints(theme('screens')),
     }),
+    typography: (theme) => ({
+      default: {
+        css: {
+          color: theme('colors.gray.900'),
+          a: {
+            color: theme('colors.linkiro'),
+            '&:hover': {
+              color: theme('colors.green'),
+            },
+          },
+        },
+      },
+    }),
   },
   variants: {
     backgroundColor: ['responsive', 'hover', 'focus', 'active'],
