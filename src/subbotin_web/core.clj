@@ -166,7 +166,7 @@
 (defn home-page
   [request]
   [:div
-   [:div {:class "flex flex-col md:flex-row border-b border-gray-100"}
+   [:div {:class "flex flex-col md:flex-row md:items-start border-b border-gray-100"}
     [:div {:class (tb/cx "p-6 md:p-8 lg:p-12 xl:p-16 pb-0 md:pb-0 lg:pb-0 xl:pb-0"
                          "flex flex-col border-b border-gray-100 md:border-none"
                          "lg:max-w-2/3 xl:max-w-1/2")}
