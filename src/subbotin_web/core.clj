@@ -130,13 +130,12 @@
       (fa {:class "mr-4 md:text-lg lg:text-2xl"} :fas :fa-fingerprint)
       [:div {:class "flex-1"}
        [:p "My PGP key fingerprint is:"]
-       [:p {:class "mt-2"}
+       [:p {:class "mt-2 flex flex-col md:flex-row"}
         [:code {:class "whitespace-no-wrap mr-6"} pk-part-1]
-        "&#8203;"
         [:code {:class "whitespace-no-wrap"} pk-part-2]]]
       (fa :fas :fa-angle-right)]]))
 
-(defn contact-form
+(defn say-hello-pane
   []
   [:div {:class "bg-manila"}
    [:div {:class "p-6 md:p-8 lg:p-12 xl:p-16 lg:max-w-screen-md"}
@@ -183,7 +182,7 @@
     [:img {:class (tb/cx "sm:w-1/2 md:w-1/3 xl:w-1/4 2xl:w-1/5 md:-mt-20 lg:-mt-24 xl:-mt-32"
                          "sm:self-center md:self-auto")
            :src (link/file-path request "/images/andrey-subbotin.png")}]]
-   (contact-form)])
+   (say-hello-pane)])
 
 (defn public-key-page
   [_request]
