@@ -39,7 +39,9 @@
 (defn wrap-md-with-prose
   [text]
   (hiccup/html
-   [:div {:class "prose lg:prose-xl"} text]))
+   [:div {:class (tb/cx "p-6 md:p-8 lg:p-12 xl:p-16")}
+    [:div {:class "prose prose-sm sm:prose lg:prose-lg xl:prose-xl 2xl:prose-2xl"}
+     text]]))
 
 (defn google-analytics
   "Global site tag (gtag.js) - Google Analytics"
@@ -80,7 +82,9 @@
   []
   [:header {:class "p-6 md:p-8 lg:p-12 xl:p-16 bg-manila-light border-b border-gray-200"}
    [:p "&nbsp;"
-    #_[:span "About | Projects | Essays | CV"]]])
+    [:ul {:class "flex flex-row space-x-6 font-mono"}
+     [:li (href {:href "/"} "~/")]
+     [:li (href {:href "/now"} "/now")]]]])
 
 (defn footer
   []
