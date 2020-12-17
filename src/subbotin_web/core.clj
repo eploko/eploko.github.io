@@ -8,7 +8,8 @@
    [optimus.assets :as assets]
    [optimus.link :as link]
    [plokodelika.toolbelt :as tb]
-   [subbotin-web.data :as data])
+   [subbotin-web.data :as data]
+   [subbotin-web.timeline :as tl])
   (:import
    [java.time ZonedDateTime Year]
    [java.time.format DateTimeFormatter])
@@ -84,7 +85,8 @@
    [:p "&nbsp;"
     [:ul {:class "flex flex-row space-x-6 font-mono"}
      [:li (href {:href "/"} "~/")]
-     [:li (href {:href "/now"} "/now")]]]])
+     [:li (href {:href "/now"} "/now")]
+     [:li (href {:href "/timeline"} "/timeline")]]]])
 
 (defn footer
   []
@@ -217,6 +219,20 @@
    [:h2 "Error 404"]
    [:p "The requested page is not found on this site."]])
 
+(defn timeline
+  [_request]
+  [:div {:class (tb/cx "p-6 md:p-8 lg:p-12 xl:p-16")}
+   [:div {:class "prose prose-sm sm:prose lg:prose-lg xl:prose-xl 2xl:prose-2xl"}
+    [:h1 "My Life in Dates"]
+    [:p {:class "md:text-xl lg:text-2xl lg:font-light 2xl:text-4xl pb-6"}
+     "The experiences we happen to have across our life span define us. They make us what we are and provide an insight into where we stand and what we may become later on. Below you'll find a list of events I reckon somehow effected my path. The list is no way comprehensive, but it's a start."]
+    [:p {:class "text-sm pb-8"}
+     [:span.bg-highlighting
+      [:strong "NB!"]
+      " This is a work in progress."]
+     " I'm slowly sifting through my memories and file the relevant pieces here."]
+    (tl/timeline->hiccup data/timeline)]])
+
 (defn pipeline
   [request root-node]
   (-> root-node
@@ -230,6 +246,11 @@
                            {:title "My PGP Public Key"
                             :content-type "text/hiccup"
                             :content public-key-page})
+      (m/edit-node-at-path "/timeline/index"
+                           merge
+                           {:title "My Life in Dates"
+                            :content-type "text/hiccup"
+                            :content timeline})
       (m/edit-node-at-path "/matsuri/index"
                            merge
                            {:title "Matsuri: Static Site Generator"
@@ -246,8 +267,9 @@
 
 (defn -main
   "I don't do a whole lot ... yet."
-  [& args]
+  [& _args]
   (println "Hello, World :)"))
 
 (comment
-  (m/run-pipeline pipeline))
+  (m/run-pipeline pipeline)
+  (oeuoeu oeuo))
