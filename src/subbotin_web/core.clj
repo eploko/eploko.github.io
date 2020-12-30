@@ -225,7 +225,7 @@
    [:div {:class "prose prose-sm sm:prose lg:prose-lg xl:prose-xl 2xl:prose-2xl"}
     [:h1 "My Life in Dates"]
     [:p {:class "md:text-xl lg:text-2xl lg:font-light 2xl:text-4xl pb-6"}
-     "The experiences we happen to have across our life span define us. They make us what we are and provide an insight into where we stand and what we may become later on. Below you'll find a list of events I reckon somehow effected my path. The list is no way comprehensive, but it's a start."]
+     "The experiences we happen to have across our life span define us. They make us what we are and provide an insight into where we stand and what we may become later on. Below you'll find a list of events I reckon somehow influenced my path."]
     [:p {:class "text-sm pb-8"}
      [:span.bg-highlighting
       [:strong "NB!"]
