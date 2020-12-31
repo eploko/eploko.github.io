@@ -56,6 +56,8 @@
     :what "Ventured into implementing my own Norton Commander clone. I eventually abandoned the idea some months later, but still… had learnt heaps from the endeavour."}
    {:when "July 1994"
     :what "Spent three weeks in a computer summer camp for kids mesmerized by an [SGI Indigo<sup>2</sup>](https://en.wikipedia.org/wiki/SGI_Indigo²_and_Challenge_M) and [IRIX](https://en.wikipedia.org/wiki/IRIX). Learnt what `ps ax` meant, how to `kill` stuck processes, and how to free disk space by removing core dumps from crashed software."}
+   {:when "March 1996"
+    :what "Learnt enough HTML to launch my own homepage on [GeoCities](https://en.wikipedia.org/wiki/Yahoo!_GeoCities). It had all of the hype bits included: a frameset, blinking text, and animated GIFs."}
    {:when "April 1996"
     :what "Discovered [Watcom C](https://en.wikipedia.org/wiki/Watcom_C/C%2B%2B) and the wonderful possibilities provided by [the DOS/4GW DOS extender](https://en.wikipedia.org/wiki/DOS/4G)."}
    {:when "February 1998"
