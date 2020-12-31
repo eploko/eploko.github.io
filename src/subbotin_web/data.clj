@@ -77,7 +77,7 @@
    {:when "September 22nd, 2000"
     :what "Became a proper FidoNet node, 2:5090/114. The station answered calls 24×7 and my mom had to put our home phone into the silent mode."}
    {:when "March 2001"
-    :what "Lended a web master job at a local advertising agency. ASP, PHP, [Parser](https://www.parser.ru/en/), MSSQL, PostgreSQL and a ton of other technologies were together in daily use and I had to figure out all of them."}
+    :what "Landed a web master job at a local advertising agency. ASP, PHP, [Parser](https://www.parser.ru/en/), MSSQL, PostgreSQL and a ton of other technologies were together in daily use and I had to figure out all of them."}
    {:when "May 15th, 2002"
     :what "The company I was working for was a kind of ISP and they were desperetely in need of a billing solution for their clients, which I ended up developing full-time on top of Linux, iptables, [NeTraMet](https://www.caida.org/tools/measurement/netramet/), and PostgreSQL. The result even gained me [the 1st Place Award at the Soft-Parade student software contest](https://www.soft-parade.ru/node/362)."}
    {:when "February 2003"
