@@ -102,7 +102,7 @@
           " "
           (fa :fab :fa-creative-commons-sa))]
    [:p.mt-4
-    (str "Copyright &copy; 1993&ndash;"
+    (str "Copyright &copy; 1996&ndash;"
          current-year
          " Andrey Subbotin.")]
    [:p {:class "mt-4 md:mt-0"}
