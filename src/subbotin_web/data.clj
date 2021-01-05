@@ -83,8 +83,32 @@
    {:when "May 15th, 2002"
     :what "The company I was working for was a kind of ISP and they were desperetely in need of a billing solution for their clients, which I ended up developing full-time on top of Linux, iptables, [NeTraMet](https://www.caida.org/tools/measurement/netramet/), and PostgreSQL. The result even gained me [the 1st Place Award at the Soft-Parade student software contest](https://www.soft-parade.ru/node/362)."}
    {:when "February 2003"
-    :what "Got hired by a team working on a binary Usenet groups aggregator service. I implemented lots of the backend and frontend mostly in Perl with occasional sprinkles of C: fetching of the news articles and their attachments, combining the multipart attachments, recovering missing parts, generating thumbnail previews for media files, building a sophisticated declarative forms module, etc."}
+    :what "Got hired by a team working on a binary Usenet groups aggregator service. I implemented lots of the backend and frontend mostly in Perl with occasional sprinkles of C: fetching of news articles and their attachments, combining multipart attachments, recovering missing parts, generating thumbnail previews for media files, building a sophisticated declarative forms module, etc."}
    {:when "2004 to the end of 2006"
     :what "Figured out I'd be better off doing freelance consulting and tackled a wide range of projects for my clients: wrote a fancy GTK UI in Python for a self order payment kiosk provider, implemented a monstrous intranet portal in PHP, developed a non-trivial <abbr title=\"Virtual File System\">VFS</abbr> driver for Windows, and built a full-blown DNS server in C++ from scratch. If it could be <abbr title=\"A computer hacker is a computer expert who uses their technical knowledge to achieve a goal or overcome an obstacle, within a computerized system by non-standard means.\">hacked</abbr>, I'd be onto it. Those were fun times."}
    {:when "January 2007"
-    :what "Landed a job at [Acronis](https://www.acronis.com/en-us/), moved to Moscow, and dived into building a .Net/COM bridge to the company's proprietary distributed object framework used in their enterprise products. The framework had <abbr title=\"Remote Method Invocations\">RMI</abbr> interfaces defined in XML and spoke some elaborated binary protocol over the wire. To tie it all together I eventually provided some .Net runtime written in C# and a set of involved XSLT transformations to generate the bridge."}])
+    :what "Landed a job at [Acronis](https://www.acronis.com/en-us/), moved to Moscow, and dived into building a .Net/COM bridge to the company's proprietary distributed object framework used in their enterprise products. The framework had <abbr title=\"Remote Method Invocations\">RMI</abbr> interfaces defined in XML and spoke some elaborated binary protocol over the wire. To tie it all together I eventually provided some .Net runtime written in C# and a set of involved XSLT transformations to generate the bridge."}
+   {:when "February 2007"
+    :what "Obtained a copy of Cocoa Programming for Mac OS X by Aaron Hillegass and managed to run OS X in a virtual machine on a PC to to play with Xcode."}
+   {:when "May 26th, 2007"
+    :what "Bought my first Mac."}
+   {:when "July 2008"
+    :what "Signed up and got accepted to the iOS Developer Program."}
+   {:when "February 4th, 2009"
+    :what "Ditched the enterprise software world and jumped on the iOS software development bandwagon full-time."}
+   {:when "August 2009 to mid-2011"
+    :what "Joined a startup as the main developer on an international crew and spent countless hours coding in every imaginable cafe, airport, hotel, and coworking space in between Moscow, Miami, San Francisco, and New York."}
+   {:when "May 23rd, 2011"
+    :what "[Presented](https://techcrunch.com/2011/05/23/karizma-lets-you-video-chat-with-people-around-you-whether-you-know-them-or-not/) the Karizma video messenger app at the Startup Battlefield at the TechCrunch Disrupt conference in New York, USA. We had a great technology stack under the <nobr>hood—</nobr>[Jingle](https://bit.ly/2Liv67w), [VP8](https://en.wikipedia.org/wiki/VP8), [ICE](https://en.wikipedia.org/wiki/Interactive_Connectivity_Establishment), Mongo DB and <nobr>Redis—</nobr>but seriously lacked in user acquisition skills. The app failed to solve the chicken and the egg problem and failed to raise any funds. Shortly after, I burnt out and moved back to Moscow."}
+   {:when "August 2011"
+    :what "An acquaintance on Twitter led me to signing a full-time contract with Yandex. For the next couple of years I became a keen software engineer on the [Yandex.Maps](https://apps.apple.com/app/yandex-maps/id313877526) and the [Yandex.Metrica](https://metrica.yandex.com/) iOS teams. Think Google Maps for iOS and Google Analytics for iOS&#133; but in Russia."}
+   {:when "November 2013"
+    :what "Living on the coast had always been a dream for me. Moscow on the other hand had no coast whatsoever and working remotely was not an option at Yandex. I somehow stumbled on a recruiting pitch by someone from [Songsterr](https://songsterr.com/), got sold on it, and joined the team."}
+   {:when "February 9th, 2014 at 12:40pm AEST"
+    :what "My flight landed in Sydney. Australia became my new home."}
+   {:when "March 2014 to the end of 2017"
+    :what "Happily had opportunities to come up with solutions to several greenfield projects and became thoroughly familiar with many technologies of the modern web and iOS development—Angular, React and React Native, Terraform, Docker, Kubernetes, Rancher, EC2, ECR, TypeScript, Swift, and everything in between. Name any and I probably know a thing or two about it and how to use it effectively and, what's arguably more important, when not to use it."}
+   {:when "2018"
+    :what "Somewhen along the ride I stumbled upon [Clojure](https://clojure.org/about/rationale) and became a fan of Rich Hickey. The language and its ecosystem quickly became the harbour at which I spent most of my spare time. I hungrily absorbed knowledge of ClojureScript, Datomic, Reagent, and Re-frame. And then there was Emacs."}
+   {:when "July 2020"
+    :what "Laid my hands on [an HHKB keyboard](https://happyhackingkb.com/), set it in [Sonshi style](https://medium.com/lim-less-is-more/sonshi-style-a-style-of-putting-keyboard-on-laptop-67f0a825a53c), learnt Dvorak, and started typing like there was no tomorrow."}])

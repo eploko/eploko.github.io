@@ -91,7 +91,7 @@
 (defn footer
   []
   [:footer {:class "p-6 md:p-8 lg:p-12 xl:p-16 bg-manila-light border-t border-gray-100"}
-   [:p "Built with Emacs, Clojure, Matsuri, Tailwind CSS, Sketch, and heaps of experience."]
+   [:p "Built with a MacBook Pro, HHKB, Emacs, Clojure, Matsuri, Tailwind CSS, Sketch, and heaps of experience."]
    [:p.mt-4.text-xl
     (href {:decorated? false
            :rel "license"
@@ -226,11 +226,6 @@
     [:h1 "My Life in Dates"]
     [:p {:class "md:text-xl lg:text-2xl lg:font-light 2xl:text-4xl pb-6"}
      "The experiences we happen to have across our life span define us. They make us what we are and provide an insight into where we stand and what we may become later on. Below you'll find a list of events I reckon somehow influenced my path."]
-    [:p {:class "text-sm pb-8"}
-     [:span.bg-highlighting
-      [:strong "NB!"]
-      " This is a work in progress."]
-     " I'm slowly sifting through my memories and file the relevant pieces here."]
     (tl/timeline->hiccup data/timeline)]])
 
 (defn pipeline
