@@ -86,7 +86,8 @@
     [:ul {:class "flex flex-row space-x-6 font-mono"}
      [:li (href {:href "/"} "~/")]
      [:li (href {:href "/now"} "/now")]
-     [:li (href {:href "/timeline"} "/timeline")]]]])
+     [:li (href {:href "/timeline"} "/timeline")]
+     [:li (href {:href "/for-recruiters"} "/for-recruiters")]]]])
 
 (defn footer
   []
