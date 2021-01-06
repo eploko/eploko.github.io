@@ -2,7 +2,9 @@ title: List of conditions and preferences, for recruiters
 
 # List of conditions and preferences, for recruiters
 
-Every once in a while recruiters find me with all kinds of offers and opportunities. Most of these make no sense, and with only a little bit of research, they wouldn't even been sent. Now, I know that research is hard, especially when there are so many places to look for information. So just below, I'll put together a list of conditions, for recruiters:
+<p class="font-light text-xl lg:text-2xl 2xl:text-4xl">Every once in a while recruiters find me with all kinds of offers and opportunities. Most of these make no sense, and with only a little bit of research, they wouldn't even been sent.</p>
+
+Now, I know that research is hard, especially when there are so many places to look for information. So just below, I'll put together a list of conditions, for recruiters:
 
 - I prefer to work remotely.
 - I am okay with occasional visits to HQ, but those visits better be rare.
@@ -13,4 +15,4 @@ Every once in a while recruiters find me with all kinds of offers and opportunit
 - Please do mention the company you're recruiting for, otherwise I have no way of doing my part of the background check, and will have to assume the worst, and decline the offer immediately.
 - The values I consider important must match what the company thinks, or have a large enough overlap. This is something I'll be the judge of.
 
-There are many more things I consider important, but these are the basic requirements, those I will not compromise on. If you have an opportunity at a company that is ok with all of the above, one that matches my skills and goals (feel free to ask me about those, by the way), we can talk. Do keep in mind that I'm happily employed at the moment, and am not looking to change anytime soon.
+There are many more things I consider important, but these are the basic requirements, those I will not compromise on. If you have an opportunity at a company that is okay with all of the above, one that matches my skills and goals (feel free to ask me about those, by the way), we can talk. Do keep in mind that I'm happily employed at the moment, and am not looking to change anytime soon.

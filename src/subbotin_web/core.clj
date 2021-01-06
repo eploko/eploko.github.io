@@ -79,15 +79,20 @@
                            {"underline" decorated?})})
      children]))
 
+(defn header-item
+  [path title]
+  (href {:href path}
+        [:li {:class "pb-3 md:pb-0 md:pr-6"}
+         title]))
+
 (defn header
   []
-  [:header {:class "p-6 md:p-8 lg:p-12 xl:p-16 bg-manila-light border-b border-gray-200"}
-   [:p "&nbsp;"
-    [:ul {:class "flex flex-row space-x-6 font-mono"}
-     [:li (href {:href "/"} "~/")]
-     [:li (href {:href "/now"} "/now")]
-     [:li (href {:href "/timeline"} "/timeline")]
-     [:li (href {:href "/for-recruiters"} "/for-recruiters")]]]])
+  [:header {:class "px-6 pt-6 pb-3 md:p-8 lg:p-12 xl:p-16 bg-manila-light border-b border-gray-200"}
+   [:ul {:class "flex flex-col md:flex-row font-mono"}
+    (header-item "/" "~/")
+    (header-item "/now/" "/now")
+    (header-item "/timeline/" "/timeline")
+    (header-item "/for-recruiters/" "/for-recruiters")]])
 
 (defn footer
   []
@@ -220,13 +225,18 @@
    [:h2 "Error 404"]
    [:p "The requested page is not found on this site."]])
 
+(defn intro-p
+  [& children]
+  [:p {:class "font-light text-xl lg:text-2xl 2xl:text-4xl"}
+     children])
+
 (defn timeline
   [_request]
   [:div {:class (tb/cx "p-6 md:p-8 lg:p-12 xl:p-16")}
    [:div {:class "prose prose-sm sm:prose lg:prose-lg xl:prose-xl 2xl:prose-2xl"}
     [:h1 "My Life in Dates"]
-    [:p {:class "md:text-xl lg:text-2xl lg:font-light 2xl:text-4xl pb-6"}
-     "The experiences we happen to have across our life span define us. They make us what we are and provide an insight into where we stand and what we may become later on. Below you'll find a list of events I reckon somehow influenced my path."]
+    (intro-p
+     "The experiences we happen to have across our life span define us. They make us what we are and provide an insight into where we stand and what we may become later on. Below you'll find a list of events I reckon somehow influenced my path.")
     (tl/timeline->hiccup data/timeline)]])
 
 (defn pipeline
