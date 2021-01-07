@@ -2,9 +2,9 @@ title: What I'm Up to Now
 
 # What I'm Up to Now[^1]
 
-During the last several years I migrated to Australia and happily settled in the nice coastal town of Corrimal NSW, some 80 kilometers down the coast from Sydney.
+During the last several years I migrated to Australia and have happily settled in the nice coastal town of Corrimal NSW, some 80 kilometers down the coast from Sydney.
 
-I'm happily married to a wonderful girl and we raise a great kid together. If I'm not preoccupied with some another-big-thing, we spend a lot of time exploring the exciting outdoors of the east coast.
+I am happily married to a wonderful girl and we are raising a great kid together. If I'm not preoccupied with a software project, we spend a lot of time exploring the exciting outdoors of Australia.
 
 Since the end of 2013 I'm in a long-term contract with [Songsterr](https://songsterr.com/), where I do everything from polishing pixels in their iOS app to setting up Kubernetes clusters.
 

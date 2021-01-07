@@ -186,7 +186,7 @@
      [:h1 {:class "text-3xl sm:text-4xl lg:text-5xl xl:text-6xl 2xl:text-8xl pb-4 font-extrabold"}
       "I'm Andrey Subbotin."]
      [:p {:class "md:text-xl lg:text-2xl lg:font-light 2xl:text-4xl"}
-      "I've been digging all things "
+      "I've been into all things "
       [:span.bg-highlighting "software development professionally since 1998."]
       " I don't write code. I don't code software. "
       "I meticulously culture it."]
@@ -236,7 +236,7 @@
    [:div {:class "prose prose-sm sm:prose lg:prose-lg xl:prose-xl 2xl:prose-2xl"}
     [:h1 "My Life in Dates"]
     (intro-p
-     "The experiences we happen to have across our life span define us. They make us what we are and provide an insight into where we stand and what we may become later on. Below you'll find a list of events I reckon somehow influenced my path.")
+     "The experiences we have across our life span define us. They make us what we are and provide an insight into where we stand and what we may become later on. Below you will find a list of events I believe somehow influenced my path.")
     (tl/timeline->hiccup data/timeline)]])
 
 (defn pipeline
