@@ -89,7 +89,7 @@
    {:when "January 2007"
     :what "Landed a job at [Acronis](https://www.acronis.com/en-us/), moved to Moscow, and dived into building a .Net/COM bridge to the company's proprietary distributed object framework used in their enterprise products. The framework had <abbr title=\"Remote Method Invocations\">RMI</abbr> interfaces defined in XML and spoke some elaborated binary protocol over the wire. To tie it all in together I eventually provided some .Net runtime written in C# and a set of involved XSLT transformations to generate the bridge."}
    {:when "February 2007"
-    :what "Obtained a copy of Cocoa Programming for Mac OS X by Aaron Hillegass and managed to run OS X in a virtual machine on a PC to to play with Xcode."}
+    :what "Obtained a copy of Cocoa Programming for Mac OS X by Aaron Hillegass and managed to run OS X in a virtual machine on a PC to play with Xcode."}
    {:when "May 26th, 2007"
     :what "Bought my first Mac."}
    {:when "July 2008"

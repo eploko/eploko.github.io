@@ -7,12 +7,12 @@ title: List of conditions and preferences, for recruiters
 Now, I know that research is hard, especially when there are so many places to look for information. So just below, I'll put together a list of conditions, for recruiters:
 
 - I prefer to work remotely.
-- I am okay with occasional visits to HQ, but those visits better be rare.
+- I am okay with occasional visits to HQ.
 - While I'm willing to travel, I prefer to do that rarely.
 - I run macOS as the primary operating system, that's my work environment. If I can't do my job with it, it isn't a job I'm willing to do. I am willing to run other operating systems in VMs and the like for testing purposes, but they will never be my main development environment.
 - If the interview process involves coding at a whiteboard, or brain-teasers, or anything like that, I'm walking out. I'm happy to show my skills in realistic environments, if my public code contributions aren't enough for one reason or another.
-- I will not work for Google, Microsoft, Apple, Oracle, Amazon, Facebook, or any bank or financial institute. If you are trying to recruit me for any of these, stop right now.
-- Please do mention the company you're recruiting for, otherwise I have no way of doing my part of the background check, and will have to assume the worst, and decline the offer immediately.
+- I prefer to work with small agile teams.
+- Please do mention the company you're recruiting for, otherwise I have no way of doing my part of the background check.
 - The values I consider important must match what the company values, or have a large enough overlap. This is something I'll be the judge of.
 
 There are many more things I consider important, but these are the basic requirements, those I will not compromise on. If you have an opportunity at a company that aligns with all of the above, one that matches my skills and goals (feel free to ask me about those), we can talk. Do keep in mind that I'm happily employed at the moment, and am not looking to change anytime soon.
