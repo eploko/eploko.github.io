@@ -131,30 +131,13 @@
             (apply fa (:icon x)))])
         xs)])
 
-(defn public-key-pane
-  []
-  (let [[pk-part-1 pk-part-2] data/pgp-fingerprint-parts]
-    [:a {:href "/public-key/"}
-     [:div {:class (tb/cx "bg-manila-ligth hover:text-white hover:bg-green hover:border-green"
-                          "transition duration-100"
-                          "flex flex-row items-center p-4 border border-linkiro"
-                          "text-xs md:text-base mt-6 xl:mt-8")}
-      (fa {:class "mr-4 md:text-lg lg:text-2xl"} :fas :fa-fingerprint)
-      [:div {:class "flex-1"}
-       [:p "My PGP key fingerprint is:"]
-       [:p {:class "mt-2 flex flex-col md:flex-row"}
-        [:code {:class "whitespace-no-wrap mr-6"} pk-part-1]
-        [:code {:class "whitespace-no-wrap"} pk-part-2]]]
-      (fa :fas :fa-angle-right)]]))
-
 (defn say-hello-pane
   []
   [:div {:class "bg-manila"}
    [:div {:class "p-6 md:p-8 lg:p-12 xl:p-16 lg:max-w-screen-md"}
     [:h3 {:class "mb-4 text-2xl font-medium"} "Say hello"]
     [:p "If you have any questions, ideas, or thoughts to share, please feel free to reach me via "
-     (href {:href (str "mailto:" data/email)} data/email)]
-    (public-key-pane)]])
+     (href {:href (str "mailto:" data/email)} data/email)]]])
 
 (defn layout
   [attrs body request]
@@ -163,7 +146,7 @@
           (google-analytics "G-MH7W1FTWXV")
           [:meta {:charset "utf-8"}]
           [:meta {:name "viewport"
-	          :content "width=device-width, initial-scale=1.0"}]
+                  :content "width=device-width, initial-scale=1.0"}]
           [:title (page-title (:title attrs))]
           [:link {:rel "stylesheet" :href (link/file-path request "/css/main.css")}]
           [:script {:src "https://kit.fontawesome.com/3254fbb503.js"
@@ -195,22 +178,6 @@
                          "sm:self-center md:self-auto")
            :src (link/file-path request "/images/andrey-subbotin.png")}]]
    (say-hello-pane)])
-
-(defn public-key-page
-  [_request]
-  [:div {:class (tb/cx "p-6 md:p-8 lg:p-12 xl:p-16")}
-   [:div {:class "prose prose-sm sm:prose lg:prose-lg xl:prose-xl 2xl:prose-2xl"}
-    [:h1 "My PGP Public Key"]
-    [:p "My key has a life span of one year. I extend it when it's about "
-     "to expire. You can always find the current key on this page or at the OpenPGP "
-     "keyserver "
-     (href {:href "https://keys.openpgp.org/search?q=andrey%40subbotin.me"}
-           "here")
-     "."]
-    [:h3 "The Fingerprint"]
-    [:pre data/pgp-fingerprint]
-    [:h3 "The Public Key"]
-    [:pre data/pgp-public-key]]])
 
 (defn matsuri-page
   [_request]
@@ -247,11 +214,6 @@
                            merge
                            {:content-type "text/hiccup"
                             :content home-page})
-      (m/edit-node-at-path "/public-key/index"
-                           merge
-                           {:title "My PGP Public Key"
-                            :content-type "text/hiccup"
-                            :content public-key-page})
       (m/edit-node-at-path "/timeline/index"
                            merge
                            {:title "My Life in Dates"

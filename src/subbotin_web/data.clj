@@ -1,7 +1,4 @@
-(ns subbotin-web.data
-  (:require
-   [clojure.java.shell :refer [sh]]
-   [clojure.string :as str]))
+(ns subbotin-web.data)
 
 (def site-title
   "Andrey Subbotin")
@@ -19,21 +16,6 @@
     :icon [:fab :fa-dribbble]}
    {:href "https://www.linkedin.com/in/asubbotin/"
     :icon [:fab :fa-linkedin]}])
-
-(def pgp-fingerprint
-  (str/trim-newline (:out (sh "gpg" "--fingerprint" email))))
-
-(def pgp-public-key
-  (:out (sh "gpg" "--armor" "--export" email)))
-
-(def pgp-fingerprint-parts
-  (->> (re-seq #"[0-9A-F]{4}\s" pgp-fingerprint)
-     (drop 1)
-     (take 10)
-     (map str/trim)
-     (partition 5)
-     (map (partial str/join " "))
-     vec))
 
 (def timeline
   [{:when "May 14th, 1981"
