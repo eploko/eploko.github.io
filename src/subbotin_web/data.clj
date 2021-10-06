@@ -93,4 +93,6 @@
    {:when "2018"
     :what "Somewhere along the ride I stumbled upon [Clojure](https://clojure.org/about/rationale) and became a fan of Rich Hickey. The language and its ecosystem quickly became the harbour at which I spent most of my spare time. I absorbed knowledge of ClojureScript, Datomic, Reagent, and Re-frame. And then there was Emacs."}
    {:when "July 2020"
-    :what "Laid my hands on [an HHKB keyboard](https://happyhackingkb.com/), set it in [Sonshi style](https://medium.com/lim-less-is-more/sonshi-style-a-style-of-putting-keyboard-on-laptop-67f0a825a53c), learnt Dvorak, and started typing like there was no tomorrow."}])
+    :what "Laid my hands on [an HHKB keyboard](https://happyhackingkb.com/), set it in [Sonshi style](https://medium.com/lim-less-is-more/sonshi-style-a-style-of-putting-keyboard-on-laptop-67f0a825a53c), learnt Dvorak, and started typing like there was no tomorrow."}
+   {:when "October 2021"
+    :what "DHL delivered [Punkt MP02](https://www.punkt.ch/en/products/mp02-4g-mobile-phone/) and I sold my iPhone and Apple Watch."}])
