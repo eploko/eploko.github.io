@@ -9,7 +9,7 @@ Now, I know that research is hard, especially when there are so many places to l
 - I prefer to work remotely.
 - I am okay with occasional visits to HQ.
 - While I'm willing to travel, I prefer to do that rarely.
-- I run macOS as the primary operating system, that's my work environment. I am willing to run other operating systems in VMs and the like for testing purposes, but they will never be my main development environment.
+- I run macOS as the primary operating system, that's my work environment. I am willing to run other operating systems in VMs and the like for testing purposes, but I'd like to avoid using them as my main development environment.
 - If the interview process involves coding at a whiteboard, or brain-teasers, or anything like that, I'm walking out. I'm happy to show my skills in realistic environments, if my public code contributions aren't enough for one reason or another.
 - I prefer to work with small agile teams.
 - Please do mention the company you're recruiting for, otherwise I have no way of doing my part of the background check.
