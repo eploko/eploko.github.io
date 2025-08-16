@@ -7,7 +7,7 @@
                  [markdown-clj "1.10.5"]
                  [me.raynes/fs "1.4.6"]
                  [optimus "0.20.2"]
-                 [org.clojure/clojure "1.10.1"]
+                 [org.clojure/clojure "1.12.1"]
                  [ring-logger "1.0.1"]
                  [ring/ring-core "1.8.2"]
                  [ring/ring-devel "1.8.2"]
