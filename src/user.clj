@@ -32,3 +32,7 @@
   []
   (generator/generate web/pipeline
                       {:assets-fn web/get-assets}))
+
+(comment
+  (restart)
+  ,)
