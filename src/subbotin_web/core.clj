@@ -136,7 +136,7 @@
   [:div {:class "bg-manila"}
    [:div {:class "p-6 md:p-8 lg:p-12 xl:p-16 lg:max-w-screen-md"}
     [:h3 {:class "mb-4 text-2xl font-medium"} "Say hello"]
-    [:p "If you have any questions, ideas, or thoughts to share, please feel free to reach me via "
+    [:p "Questions, ideas, or just want to chat? Please reach out at "
      (href {:href (str "mailto:" data/email)} data/email)]]])
 
 (defn layout
