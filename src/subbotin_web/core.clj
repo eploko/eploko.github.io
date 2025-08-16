@@ -143,7 +143,7 @@
   [attrs body request]
   (html5 {:lang "en"}
          [:head
-          (google-analytics "G-MH7W1FTWXV")
+          (google-analytics "G-FQNR4XXVKY")
           [:meta {:charset "utf-8"}]
           [:meta {:name "viewport"
                   :content "width=device-width, initial-scale=1.0"}]
