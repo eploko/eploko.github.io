@@ -14,7 +14,5 @@
                  [ring/ring-jetty-adapter "1.8.2"]]
   :main ^:skip-aot subbotin-web.core
   :target-path "target/%s"
-  :profiles {:repl {:repl-options {:init-ns user
-                                   :timeout 120000}}}
   :aliases {"serve" ["run" "-m" "user/go"]
             "generate" ["run" "-m" "user/generate"]})
