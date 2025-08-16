@@ -2,13 +2,23 @@ title: What I'm Up to Now
 
 # What I'm Up to Now[^1]
 
-During the last several years I've migrated to Australia and have happily settled in the nice coastal town of Corrimal NSW, some 80 kilometers down the coast from Sydney.
+I live in the beautiful coastal town of Wollongong, NSW, Australia—about 80
+kilometers south of Sydney along the coast.
 
-I am happily married to a wonderful girl and we are raising a great kid together. If I'm not preoccupied with a software project, we spend a lot of time exploring the exciting outdoors of Australia.
+I'm happily married to a wonderful woman, and together we're raising our lovely
+kids. When I'm not absorbed in a software project, we spend most of our time
+exploring Australia's incredible outdoors.
 
-Since March 2021 I work for [Accelo](https://accelo.com/). I still am not sure what this relationship will lead to, but I totally enjoy the folks I work with, the scope of things to apply myself to, and the positive vibe everyone brings to the workplace.
+Since December 2021, I've been working at [Payreq](https://payreq.com/), where I
+dive deep into Clojure, AWS, and everything in between.
 
-In my spare time, I devote myself to Clojure and Emacs and try to figure out how I can effectively manage the information flow of the digital age. I've recently read [How to Take Smart Notes](https://www.amazon.com.au/How-Take-Smart-Notes-Nonfiction-ebook/dp/B06WVYW33Y) by
-Sönke Ahrens and [Digital Minimalism](https://www.amazon.com.au/Digital-Minimalism-Living-Better-Technology-ebook/dp/B07D1G6DTF) by Cal Newport and the books have influenced me heaps.
+In my spare time, I love tinkering with Clojure and Emacs while trying to figure
+out how to effectively manage information in our digital age. I recently read
+[How to Take Smart Notes](https://www.amazon.com.au/How-Take-Smart-Notes-Nonfiction-ebook/dp/B06WVYW33Y)
+by Sönke Ahrens and
+[Digital Minimalism](https://www.amazon.com.au/Digital-Minimalism-Living-Better-Technology-ebook/dp/B07D1G6DTF)
+by Cal Newport—both books have influenced me tremendously. Eric Evans's
+[Domain Driven Design](https://www.amazon.com.au/Domain-Driven-Design-Tackling-Complexity-Software/dp/0321125215)
+is another recent favorite of mine.
 
 [^1]: Inspired by [Derek Siver's /now page movement](https://nownownow.com/about).

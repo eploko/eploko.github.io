@@ -15,4 +15,4 @@ Now, I know that research is hard, especially when there are so many places to l
 - Please do mention the company you're recruiting for, otherwise I have no way of doing my part of the background check.
 - The values I consider important must match what the company values, or have a large enough overlap. This is something I'll be the judge of.
 
-There are many more things I consider important, but these are the basic requirements. If you have an opportunity at a company that aligns with all of the above, one that matches my skills and goals (feel free to ask me about those), we can talk. Do keep in mind that I'm happily employed at the moment, and am not looking to change anytime soon.
+There are many more things I consider important, but these are the basic requirements. If you have an opportunity at a company that aligns with all of the above, one that matches my skills and goals (feel free to ask me about those), we can talk.

@@ -203,7 +203,7 @@
    [:div {:class "prose prose-sm sm:prose lg:prose-lg xl:prose-xl 2xl:prose-2xl"}
     [:h1 "My Life in Dates"]
     (intro-p
-     "The experiences we have across our life span define us. They make us what we are and provide an insight into where we stand and what we may become later on. Below you will find a list of events I believe somehow influenced my path.")
+     "The experiences we accumulate throughout our lives shape who we become. They define our character, reveal where we stand today, and hint at what we might become tomorrow. Below is a timeline of events that have somehow influenced my path.")
     (tl/timeline->hiccup data/timeline)]])
 
 (defn pipeline

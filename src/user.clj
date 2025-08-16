@@ -35,4 +35,6 @@
 
 (comment
   (restart)
+
+  (generate)
   ,)
