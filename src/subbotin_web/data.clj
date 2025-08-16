@@ -15,7 +15,9 @@
    {:href "https://dribbble.com/eploko"
     :icon [:fab :fa-dribbble]}
    {:href "https://www.linkedin.com/in/asubbotin/"
-    :icon [:fab :fa-linkedin]}])
+    :icon [:fab :fa-linkedin]}
+   {:href "https://subbotin.social/@andrey"
+    :icon [:fab :fa-mastodon]}])
 
 (def timeline
   [{:when "May 14th, 1981"
